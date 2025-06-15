@@ -1,74 +1,100 @@
-body{
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #C006C4;
-    color: #555;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('Birthday\ Party.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
 }
-.container{
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #e6d5b5;
-    border-radius: 10px;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+
+.container {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  max-width: 700px;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.header{
-    text-align: center;
-    padding: 20px;
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
-    color: white;
-    border-radius: 10px 10px 0 0;
+
+.container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px #000;
 }
-.header:hover{
-    transform: scale(1.01);
-    transition: 0.3s;
-    box-shadow: 1px 2px 2px 2px #316877;
+
+
+h1, h2, h3 {
+  text-align: center;
+  color: #ffd700;
 }
-.event-details{
-    padding: 20px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
+
+h4 {
+  text-align: left;
+  color: #ffd700;
 }
-.rsvp-form{
-    padding: 20px;
-    background-color: #a5cbfe;
-    border-radius: 10px;
-    margin: 20px 0;
+
+.event-details p,
+.highlights h3 {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #ffcc70;
 }
-.rsvp-form:hover{
-    transform: scale(1.01);
-    transition: 0.3s;
-    box-shadow: 1px 2px 2px 2px #316877;
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
 }
-.rsvp-form input{
-    font-weight: bold;
-    color: black;
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1rem;
+  flex: 1 1 40%;
+  backdrop-filter: blur(4px);
 }
-input, select{
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    box-sizing: border-box;
+
+.card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: #ffd700;
 }
-button{
-    background-color: #6e8efb;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
+
+.card ul {
+  padding-left: 1.2rem;
+  text-align: left;
 }
-button:hover{
-    background-color: #5c7cfa;
+
+.card li {
+  margin: 0.3rem 0;
 }
-.animation{
-    transition: transform 0.3s;
+
+
+.rsvp-form input,
+.rsvp-form button {
+  width: 100%;
+  padding: 0.7rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
 }
-.animation:hover{
-    transform: scale(1.02);
+
+.rsvp-form input[type="radio"] {
+  width: auto;
+  margin: 0 5px;
+}
+
+.rsvp-form button {
+  background: #ffcc00;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.rsvp-form button:hover {
+  background: #ffdb4d;
 }
