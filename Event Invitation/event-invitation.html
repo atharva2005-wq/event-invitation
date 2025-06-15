@@ -1,46 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Invitation</title>
-    <link rel="stylesheet" href="event-invitation.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Invitation</title>
+  <link rel="stylesheet" href="event-invitation.css" />
 </head>
 <body>
-    <div class="container animation">
-        <div class="header">
-            <h1>You're invited!!</h1>
-            <h2>Atharva's 20th Birthday Party</h2>
-        </div>
-        <div class="event-details">
-            <p>Join us for an amazing birthday celebration recalling some amazing moments with Atharva!</p>
-            <p>Date: 15 June, 2025</p>
-            <p>Time: <time>19:00</time> onwards.</p>
-            <p>Venue: Open Lawn, Andheri, Mumbai</p>
-            <div class="countdown" id="countdown"></div>
-        </div>
-        <div class="rsvp-form">
-            <h3>RSVP</h3>
-            <form id="rsvpform">
-                <input type="text" name="name" id="name" placeholder="Your Name" required><br>
-                <input type="email" name="email" id="email" placeholder="Your email" required><br>
-                <select name="attendance" id="attendance" required>
-                    <option value="">Will you attend?</option>
-                    <option value="yes">Yes, I'll be there!</option>
-                    <option value="no">Sorry, I can't make it</option>
-                </select><br>
-                <input type="number" name="guests" id="guests" placeholder="Number of guests"><br>
-                <button type="submit">Submit RSVP</button>
-            </form>
-        </div>
+  <div class="container animation">
+    <div class="header">
+      <h1>You're invited!!</h1>
+      <h2>Atharva's 20th Birthday Party</h2>
     </div>
-    <script>
-        document.getElementById('rsvpform').addEventListener('submit', function(e){
-    e.preventDefault();
-    //clear form
-    this.reset();
-    alert('Thank you for your response!'); 
-});
-    </script>
+
+    <div class="event-details">
+      <p>🎉 Join us for a magical evening celebrating 20 fabulous years of Atharva!</p>
+      <p>📅 Day & Date: Sunday, 22 June, 2025</p>
+      <p>⏰ Time: <time>7:00 PM</time> onwards</p>
+      <p>📍 Venue: Open Lawn, Andheri, Mumbai</p>
+    </div>
+
+ <section class="highlights">
+      <h3>🎂 What to Expect? 🎂</h3>
+      <div class="features">
+        <div class="card">
+          <h4>🍽️ Delicious Food 🍽️</h4>
+          <ul>
+            <li>Live Pasta Station 🍝</li>
+            <li>Unlimited Pizza & Chaat 🍕</li>
+            <li>Mocktail Bar 🍹</li>
+            <li>Surprise Dessert Counter 🍨</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>🎮 Games & Fun 🎮</h4>
+          <ul>
+            <li>Musical Chairs 💺</li>
+            <li>Minute to Win It 🎯</li>
+            <li>Photo Booth 📸</li>
+            <li>Lucky Draw & Prizes 🎁</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="rsvp-form">
+      <h3>RSVP</h3>
+      <form id="rsvpform">
+        <input type="text" name="name" id="name" placeholder="Your Name" required /><br />
+        <input type="email" name="email" id="email" placeholder="Your Email" required /><br />
+
+        <h4>Will you attend?</h4>
+        <input type="radio" name="attendance" id="attendYes" value="yes" /> Yes <br />
+        <input type="radio" name="attendance" id="attendNo" value="no" /> No <br />
+
+        <div id="guestSection" style="display: none;">
+          <input type="number" name="guests" id="guests" placeholder="Number of guests (including you)" min="1" max="10" /><br />
+        </div>
+
+        <button type="submit">Submit RSVP</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="event-invitation.js"></script>
 </body>
 </html>
